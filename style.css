@@ -11,6 +11,13 @@ li.social {
 	color: white;
 }
 
+/* Override default Bootstrap btn style */
+.btn-default:hover {
+	color: white;
+	background-color: green;
+}
+
+
 /* MARKETING CONTENT (Boilerplate code from https://getbootstrap.com/docs/3.3/examples/carousel/)
 -------------------------------------------------- */
 
