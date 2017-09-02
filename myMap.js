@@ -2,7 +2,14 @@ var myMap = L.Wrld.map("map", config.MY_KEY, {
 	center: [40.713, -74.006],
 	zoom: 16
 });
-var marker = L.marker([40.713, -74.006]).addTo(myMap);
+
+var marker = L.marker([40.713, -74.006])
+			  .addTo(myMap);
+			  marker.bindPopup('This is City Hall');
+
+// var control = L.control().addTo(userMap);
+
+
 	// myMap.locate({setView: true, maxZoom: 7});
 	
 	myMap.themes.setTheme(

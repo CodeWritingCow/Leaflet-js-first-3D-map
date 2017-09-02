@@ -1,0 +1,28 @@
+li.social {
+	display: inline-block;
+}
+/*
+.social a {
+	color: black;
+}*/
+
+.social a:hover {
+	background-color: green !important;
+	color: white;
+}
+
+/* MARKETING CONTENT (Boilerplate code from https://getbootstrap.com/docs/3.3/examples/carousel/)
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
