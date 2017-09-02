@@ -8,43 +8,24 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
 
 	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Open+Sans" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Comfortaa" rel="stylesheet"> -->
 </head>
 <body style="padding: 0 10px;">
 
-<p style="font-family: 'Libre Barcode 39 Text', cursive; font-size: 50px;">My First 3D Map</p>
+	<p style="font-family: 'Libre Barcode 39 Text', cursive; font-size: 50px;">My First 3D Map</p>
 
-<div id="map" style="height: 50vh"></div>
+	<div id="map" style="height: 50vh"></div>
 
-<div>
-	
-	<!-- <h1 style="font-family: 'Libre Barcode 39 Text', cursive; font-size: 50px;">My First 3D Map</h1> -->
-	<p style="font-family: 'Open Sans', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	<!-- <p style="font-family: 'Comfortaa', cursive;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod -->
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+	<div>
+		<p style="font-family: 'Open Sans', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
 
-<script type="text/javascript" src="config.js"></script>
-
-<!-- <script>L.Wrld.map("map", "your_api_key_here");</script> -->
-<script>
-	var myMap = L.Wrld.map("map", config.MY_KEY, {
-		center: [40.713, -74.006],
-		zoom: 16
-	});
-		L.marker([40.713, -74.006]).addTo(myMap);
-		// myMap.locate({setView: true, maxZoom: 7});
-		
-		myMap.themes.setTheme(
-			L.Wrld.themes.season.Summer,
-		    L.Wrld.themes.time.Day,
-			L.Wrld.themes.weather.Clear
-			);
-</script>
+	<script type="text/javascript" src="config.js"></script>
+	<script type="text/javascript" src="myMap.js"></script>
 
 </body>
 </html>
