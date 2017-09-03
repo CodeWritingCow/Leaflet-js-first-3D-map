@@ -4,6 +4,7 @@ var userSpot = [0 ,0];
 var userMap = L.map("userMap");
 	userMap.setView(worldCenter, 1);
 
+var markers = new L.LayerGroup();
 var userMarker;
 
 // Add NASA night tile layer to map
@@ -20,21 +21,24 @@ L.tileLayer('http://map1.vis.earthdata.nasa.gov/wmts-webmerc/VIIRS_CityLights_20
 
 // Find user's geolocation using Leaflet's locate method
 function findLocation() {
-	userMap.locate({setView: true, maxZoom: 3});
+	userMap.locate({setView: true, maxZoom: 5});
 }
 
 
 // If Leaflet finds user's geolocation, set marker there
 function onLocationFound(e) {
     // var radius = e.accuracy / 2;
-    userMarker = L.marker(e.latlng);
-    	userMarker.addTo(userMap);
-        userMarker.bindPopup("You are here").openPopup();
+    L.marker(e.latlng).addTo(markers);
+    markers.addTo(userMap);
+    // userMap.addLayer(userMarker);
+    	// userMarker.addTo(userMap);
+        // userMarker.bindPopup("You are here").openPopup();
 }
 
 // Reset map zoom to 1, and reset center to worldCenter coordinates. Remove marker.
 function resetLocation() {
-	userMap.removeLayer(userMarker);
+	markers.clearLayers();
+	// userMap.removeLayer(userMarker);
 	userMap.setView(worldCenter, 1);
 }
 
