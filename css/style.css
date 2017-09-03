@@ -13,6 +13,10 @@ li.social {
 	background-color: green;
 }
 
+.reset-btn:hover {
+  background-color: red;
+}
+
 .imgFrame {
 	border-top: 20px solid black;
 	border-bottom: 20px solid black;
