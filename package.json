@@ -1,0 +1,31 @@
+{
+  "name": "leaflet-js-first-3d-map",
+  "version": "1.0.0",
+  "description": "3D map made with Wrld.js, an API based on Leaflet.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeWritingCow/Leaflet-js-first-3D-map.git"
+  },
+  "keywords": [
+    "map",
+    "JavaScript",
+    "Leaflet.js",
+    "wrld.js"
+  ],
+  "author": "Gary Pang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeWritingCow/Leaflet-js-first-3D-map/issues"
+  },
+  "homepage": "https://github.com/CodeWritingCow/Leaflet-js-first-3D-map#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
