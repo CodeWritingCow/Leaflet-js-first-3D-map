@@ -5,17 +5,11 @@ var userMap = L.map("userMap");
 
 var markers = new L.LayerGroup();
 
-// Add NASA night tile layer to map
-L.tileLayer('http://map1.vis.earthdata.nasa.gov/wmts-webmerc/VIIRS_CityLights_2012/default/{time}/{tilematrixset}{maxZoom}/{z}/{y}/{x}.{format}', {
-	attribution: 'NASA',
-	bounds: [[-85.0511287776, -179.999999975], [85.0511287776, 179.999999975]],
-	minZoom: 1,
-	maxZoom: 8,
-	format: 'jpg',
-	time: '',
-	tilematrixset: 'GoogleMapsCompatible_Level'
+// Add CartoDB dark tile layer to map
+L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+	subdomains: 'abcd'
 }).addTo(userMap);
-
 
 // Find user's geolocation using Leaflet's locate method
 function findLocation() {

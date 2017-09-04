@@ -1,6 +1,6 @@
 var mainMap = L.Wrld.map("map", config.MY_KEY, {
-	center: [40.713, -74.006],
-	zoom: 15
+	center: [40.709138, -73.995889],
+	zoom: 14.5
 });
 
 /* var marker = L.marker([40.713, -74.006]);
@@ -9,8 +9,8 @@ var mainMap = L.Wrld.map("map", config.MY_KEY, {
 
 	// mainMap.locate({setView: true, maxZoom: 7});
 	
-	mainMap.themes.setTheme(
-		L.Wrld.themes.season.Summer,
-	    L.Wrld.themes.time.Day,
-		L.Wrld.themes.weather.Clear
-		);
+mainMap.themes.setTheme(
+	L.Wrld.themes.season.Summer,
+    L.Wrld.themes.time.Day,
+	L.Wrld.themes.weather.Clear
+	);
