@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Wrld.js 3D Map</title>
+	<title>Find Your Location</title>
 
 	<link rel="icon" href="img/globe-8-bit.jpg" type="image/jpg">
 	<!-- Pixel globe. Credit: Free Press/ Free Press Action Fund, https://www.flickr.com/photos/freepress/8783034337 -->
 	<!-- https://creativecommons.org/licenses/by-nc-sa/2.0/ -->
 
-	<meta name="description" content="WRLD 3D Map made with Wrld.js, an API based on Leaflet.js">
+	<meta name="description" content="Find your location with this Wrld.js map.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -27,18 +27,27 @@
 		</div>
 	</nav>
 
-	<div id="map" class="jumbotron" style="height: 75vh; background-color: black; margin-bottom: 60px;"></div>
+	<div class="jumbotron" style="margin-bottom: 60px; padding: 20px; border-top: 20px black solid; border-bottom: 20px black solid;">
+   
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"><i class="fa fa-map-marker fa-2x" style="float: left; margin-right: 20px;"></i>Lorem ipsum dolor sit amet. <span class="text-muted">Consectetur adipisicing.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <p style="display: inline-block;"><a class="btn btn-default" role="button" onclick="findLocation();">Find your location</a></p>
+          <p style="display: inline-block;"><a class="btn btn-default reset-btn" role="button" onclick="resetLocation();">Reset map</a></p>
+        </div>
+        <div class="col-md-5">
+          <div id="userMap" class="featurette-image img-responsive center-block" style="height: 50vh; width: 100%; float: left; margin-right: 20px;"></div>
+        </div>
+    </div>      
+
+  </div>
 
 	<!-- Boilerplate code from https://getbootstrap.com/docs/3.3/examples/carousel/ -->
     <div class="container marketing">
 
       <!-- Three columns of text. -->
       <div class="row">
-        <div class="col-lg-4">
-          <i class="fa fa-globe fa-5x"></i>
-          <h2>Wrld.js 3D Map</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-        </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
         <i class="fa fa-space-shuttle fa-5x"></i>
           <h2>Heading</h2>
@@ -48,11 +57,19 @@
         <i class="fa fa-map-marker fa-5x"></i>
           <h2>Find Your Location</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="/find-your-location.html" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <i class="fa fa-globe fa-5x"></i>
+          <h2>WRLD.JS 3D Map</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-default" href="/" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
-    <hr class="featurette-divider">
+      <!-- START THE FEATURETTES -->
+      <hr class="featurette-divider">
+
+
 
     <footer style="padding-bottom: 50px;">
     	<div class="container">
@@ -78,8 +95,7 @@
 	<link rel="stylesheet" href="css/style.min.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Open+Sans" rel="stylesheet">
-	<script type="text/javascript" src="js/dist/config.min.js"></script>
-	<script type="text/javascript" src="js/dist/mainMap.min.js"></script>
+	<script type="text/javascript" src="js/dist/userMap.min.js"></script>
 
 </body>
 </html>
