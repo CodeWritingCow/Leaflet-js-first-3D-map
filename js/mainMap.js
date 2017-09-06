@@ -1,6 +1,7 @@
 var mainMap = L.Wrld.map("map", config.MY_KEY, {
 	center: [40.709138, -73.995889],
-	zoom: 14.5
+	zoom: 14.5,
+	zoomControl: true // wrld.js appears to disable zoomControl by default
 });
 
 /* var marker = L.marker([40.713, -74.006]);
