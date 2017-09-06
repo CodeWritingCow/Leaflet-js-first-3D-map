@@ -1,11 +1,11 @@
 // Map tile layers
-var CartoDB_DarkMatter = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+var CartoDB_DarkMatterNoLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
 	subdomains: 'abcd',
 });
-
-var OpenStreetMap_BlackAndWhite = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+var CartoDB_PositronNoLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+	subdomains: 'abcd',
 });
 
 var NASAGIBS_ViirsEarthAtNight2012 = L.tileLayer('http://map1.vis.earthdata.nasa.gov/wmts-webmerc/VIIRS_CityLights_2012/default/{time}/{tilematrixset}{maxZoom}/{z}/{y}/{x}.{format}', {
@@ -19,9 +19,9 @@ var NASAGIBS_ViirsEarthAtNight2012 = L.tileLayer('http://map1.vis.earthdata.nasa
 });
 
 var baseMaps = {
-	"CartoDB: Dark Matter": CartoDB_DarkMatter,
-	"OpenStreetMap: Black and White": OpenStreetMap_BlackAndWhite,
-	"NASA: Night": NASAGIBS_ViirsEarthAtNight2012
+	"NASA: Night": NASAGIBS_ViirsEarthAtNight2012,
+	"CartoDB: Dark Matter": CartoDB_DarkMatterNoLabels,
+	"CartoDB: Positron": CartoDB_PositronNoLabels
 };
 
 // Lat and lng coordinates
@@ -31,7 +31,7 @@ var worldCenter = [30, 31];
 var userMap = L.map("userMap", {
 	center: worldCenter,
 	zoom: 1,
-	layers: [CartoDB_DarkMatter]
+	layers: [NASAGIBS_ViirsEarthAtNight2012]
 });
 
 // Create layer for storing map markers
