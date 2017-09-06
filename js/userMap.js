@@ -24,6 +24,15 @@ var baseMaps = {
 	"CartoDB: Positron": CartoDB_PositronNoLabels
 };
 
+// https: also suppported.
+var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd',
+	ext: 'png'
+});
+
+var overlayMap = { "Labels": Stamen_TonerHybrid };
+
 // Lat and lng coordinates
 var worldCenter = [30, 31];
 
@@ -62,7 +71,7 @@ function onLocationError(e) {
 }
 
 // Map control lets user choose which tile layer to display
-L.control.layers(baseMaps).addTo(userMap);
+L.control.layers(baseMaps, overlayMap).addTo(userMap);
 
 userMap.on('locationfound', onLocationFound);
 userMap.on('locationerror', onLocationError);
